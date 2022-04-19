@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+/*Подлючаем другой шрифт с веб-браузера*/
+
+body {
+  background-color: #f1f1f1;
+  color: #0f141e;
+
+  font-size: 16px;
+  font-weight: normal;
+  font-family: "Roboto", sans-serif;
+  /*Для подключения другого шрифта*/
+
+  /* font: normal, 16px, "Roboto", sans-serif; */
+  /*Идентичная запись той, что сверху*/
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  /* Когда мы наводим мышку на ссылку, она изменяет свой стиль*/
+  text-decoration: underline;
+}
+
+a:active {
+  /*Когда мы нажимаем на ссылку, то она выдает какой-то эффект*/
+  color: blue;
+}
+
+a:visited {
+  /*Когда мы поситили ссылку, она выдает какой-то эффект*/
+  color: grey;
+}
+
+.avatar {
+  width: 270px;
+  border-radius: 28px;
+  box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.25);
+  /*box-shadow: X offset, Y offset, Blur, Color*/
+}
+
+.info p {
+  color: #86898f;
+  font-style: italic;
+  /*С помощью этого селектора мы стиоизуем наш текст*/
+  font-weight: bold;
+  /*С помощью этого селектора указыаем ширину для текста*/
+  text-decoration: none;
+  /*Делает в тексте декорации (по типу подчеркивания текста и т.д.)*/
+  text-transform: none;
+  /*Трансформирует текст (к примеру делает все слова в верхкнем регистре т.п.*/
+  letter-spacing: 2px;
+  /*Это свойство указывает на отступ между буквами*/
+}
+
+.info {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 700px) {
+  .info {
+    display: block;
+    text-align: center;
+  }
+}
+
+.info-text {
+  margin-left: 40px;
+}
+
+.info-text h4 {
+  margin-bottom: 10px;
+}
+/*Box Model*/
+.container {
+  max-width: 750px;
+  /*Для того, чтобы появился какой-то адаптив для текстаыв*/
+  margin: auto;
+  /*margin - делает отсупы сверху, справа, снизу и слева*/
+}
+
+/* .social {
+  background: green; */
+/* padding: 15px; */
+/*padding - делает внутренние отступы внутри блока*/
+/* padding: 15px 20px 25px 30px; */
+/* padding: top, right, bottom, left; */
+/* margin: 5px; */
+/*Делает внешние отступы от блока*/
+
+/* border: 5px solid red; */
+/*border: width, border, color*/
+/* border-bottom-style: dotted; */
+/*border-[something side]-style - указывает стиль для какой-то из сторон*/
+/* border-top-width: 15px; */
+/*border-[something side]-width- укащывает цвет какой-то стороны*/
+/* border-right-color: blue; */
+/*border-[something side]-color - указывает цвет текст какой-то стороны*/
+/* } */
+
+/* .box-model > div { */
+/* ">" - указывает, что мы хотим стилизовать только дочерние div*/
+/* float: left;
+  background: black;
+  height: 200px;
+  border: 4px solid red;
+  width: 25%;
+
+  box-sizing: border-box; */
+/*box-sizing - делает так, чтобы все элементы выравнились в одну строку и не разделялись*/
+/* } */
+
+.bg-yellow {
+  background: #fff9dc;
+}
+
+.bg-green {
+  background: #e5ffe7;
+}
+
+.bg-red {
+  background: #ffe5e5;
+}
+
+.card {
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+}
+
+.list {
+  padding: 0px 20px;
+}
+
+.list li {
+  color: #86898f;
+  margin-bottom: 10px;
+}
+
+.table {
+  width: 100%;
+}
+
+.table td {
+  padding-bottom: 10px;
+}
+
+.table td:nth-child(2),  /*К примеру выбираем каждый второй td в теге tr и его стилизуем */
+.table td:nth-child(3) {
+  color: #86898f;
+}
+
+/* .table tr:nth-child(even) { */
+/*Каждый четный tr как-то стилизуется*/
+/* background: red;
+} */
+
+.courses {
+  list-style: none;
+  padding: 0px;
+}
+
+.courses li {
+  padding-bottom: 5px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #ccc;
+}
+
+.contact h2 {
+  text-align: center;
+}
+
+.form-group label {
+  display: block; /*Мы говорим, чтобы каждый label стал блочным элементом*/
+  font-size: 14px;
+  color: #86898f;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  background: transparent; /*Делаем элемент такого же цвета, что и внешняя среда*/
+  border-bottom: 1px solid #ccc;
+  color: #000;
+  padding: 15px 0px 10px;
+  outline: none; /*Это свойство для того, чтобы при нажатии на input не было вокруг него границ*/
+  font-family: inherit; /*inherit - параметр, который говорит, что шрифт должен наследоваться*/
+}
+
+.row {
+  display: flex;
+  /*flex - делает все дочерние элементы резиновыми, а не инлайновыми или блочными, как было изначально*/
+  margin-bottom: 20px;
+}
+
+.row > .form-group {
+  width: 50%;
+  margin-right: 20px;
+}
+
+.row > .form-group:last-child {
+  /* Мы говорим, что у последнего form-group будет margin-right равен 0px */
+  margin: 0px;
+}
+
+/* .row > .form-group:first-child {
+Мы говорим, что хотим сделать margin-right только для первого form-group
+margin-right: 20px;
+} */
+
+.btn {
+  background: black;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  margin-top: 15px;
+  font-family: inherit;
+  cursor: pointer; /*При наведение на кнопку изменяет курсор, показывая, что она активна*/
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
